@@ -5,36 +5,50 @@
   <meta charset="utf-8">
   <title>Quality course pathway</title>
   <style>
-    img {
-      width: 960px;
-      height: auto;
-      display: inline-block;
-    }
 
-    .qcp {
-      background-color: white;
-      display: inline-block;
-      /*margin: 0 auto;*/
-      width: 100%;
-      text-align: center;
-      /* Need to be set in order to dapt to the container width while image ramains on a fixed width */
-      margin-left: -8px;
-      transform: scale(0.6);
-      transform-origin: top left;
-      -webkit-filter: blur(0);
-      -moz-filter: blue(0);
-      -o-filter: blue(0);
-      filter: blur(0);
-    }
+  #cboxLoadedContent .qcp {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 
-    .qcp img {
-      image-rendering: optimizeSpeed;             /*                     */
-      image-rendering: -moz-crisp-edges;          /* Firefox             */
-      image-rendering: -o-crisp-edges;            /* Opera               */
-      image-rendering: -webkit-optimize-contrast; /* Chrome (and Safari) */
-      image-rendering: optimize-contrast;         /* CSS3 Proposed       */
-      -ms-interpolation-mode: nearest-neighbor;
-    }
+  img {
+    width: 960px;
+    height: auto;
+    display: inline-block;
+  }
+
+  .qcp {
+    background-color: white;
+    display: inline-block;
+    /*margin: 0 auto;*/
+    width: 100%;
+    text-align: center;
+    /* Need to be set in order to dapt to the container width while image ramains on a fixed width */
+    margin-left: -8px;
+    -webkit-transform: scale(0.6);
+    transform: scale(0.6);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-filter: blur(0);
+    -moz-filter: blue(0);
+    -o-filter: blue(0);
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="0" /></filter></svg>#filter');
+    filter: blur(0);
+  }
+
+  .qcp img {
+    image-rendering: optimizeSpeed;
+    /*                     */
+    image-rendering: -moz-crisp-edges;
+    /* Firefox             */
+    image-rendering: -o-crisp-edges;
+    /* Opera               */
+    image-rendering: -webkit-optimize-contrast;
+    /* Chrome (and Safari) */
+    image-rendering: optimize-contrast;
+    /* CSS3 Proposed       */
+    -ms-interpolation-mode: nearest-neighbor;
+  }
 
   </style>
 </head>
